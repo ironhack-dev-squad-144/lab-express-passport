@@ -78,7 +78,8 @@ Edit the navbar to display "Login" and "Signup" when the user is disconnected an
 For this, you have to use a middleware in your `app.js`, before your routes:
 ```js
 app.use((req,res,next) => {
-  req.locals.isConnected = true; // Define a view variable named "isConnected"
+  // TODO: edit the code of this middleware
+  req.locals.isConnected = true; // Define a view variable named "isConnected" with the value "true"
   next();
 })
 ```
