@@ -26,6 +26,7 @@ Hints:
   - `views/login.hbs`
   - `views/signup.hbs`
   
+![image](https://user-images.githubusercontent.com/5306791/60470897-1aac4d00-9c5a-11e9-82b6-a6fca0be5d7e.png)
 
   
   
@@ -68,3 +69,18 @@ module.exports = User;
 Edit the profile page to display the github username and the profile picture from GitHub.
 
 **BONUS**: If the user doesn't have any GitHub username, add a button "*Link your account to GitHub*" that would edit the `githubUsername` and the `profilePicture`.
+
+
+## Iteration 6: Edit the navbar
+
+Edit the navbar to display "Login" and "Signup" when the user is disconnected and "Logout" when the user is connected.
+
+For this, you have to use a middleware in your `app.js`, before your routes:
+```js
+app.use((req,res,next) => {
+  req.locals.isConnected = true; // Define a view variable named "isConnected"
+  next();
+})
+```
+
+You should also modify your `layout.hbs` ;)
