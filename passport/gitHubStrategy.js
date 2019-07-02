@@ -2,11 +2,15 @@ const passport = require("passport");
 const GitHubStrategy = require("passport-github").Strategy;
 const User = require("../models/User");
 
+const Const = require("./const");
+const CLIENT_ID = Const.CLIENT_ID
+const CLIENT_SECRET = Const.CLIENT_SECRET
+
 passport.use(
   new GitHubStrategy(
     {
-      clientID: "5f06fb4f52c44e3a7847",
-      clientSecret: "4da96505477f7ca9bfd51de6dfc77f287991bd3d"
+      clientID: CLIENT_ID,
+      clientSecret: CLIENT_SECRET
     },
     function(accessToken, refreshToken, profile, done) {
       console.log("TCL: profile", profile);
