@@ -6,6 +6,7 @@ Clone the project, go inside the cloned folder and execute the following command
 
 ```sh
 $ irongenerate --auth . # Generate an Express project with signup + login configured in the current folder
+# Type "y" to confirm
 $ npm run dev # Run the project
 ```
 
