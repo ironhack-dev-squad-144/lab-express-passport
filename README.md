@@ -86,3 +86,14 @@ app.use((req,res,next) => {
 ```
 
 You should also modify your `layout.hbs` ;)
+
+
+## Solution
+
+If you want to execute the solution, you have to create a `.env` file:
+```
+PORT=3000
+ENV=development
+GITHUB_CLIENT_ID=...........
+GITHUB_CLIENT_SECRET=...........
+```
