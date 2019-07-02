@@ -1,0 +1,16 @@
+<h1>My Profil</h1>
+
+
+{{#if user.email}}
+email: {{user.email}} </br>
+{{/if}}
+
+
+{{#if user.githubUsername}}
+<h2>GIT HUB INFOS</h2>
+<p>name: {{user.githubUsername}}</p>
+<p>URL: {{user.githubUrl}}</p>
+<p><img src="{{user.profilePicture}}" alt=""></p>
+{{/if}}
+
+<p>createdAt: {{user.created_at}}</p>
