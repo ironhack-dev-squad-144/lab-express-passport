@@ -15,14 +15,14 @@ Spend few minutes exploring the code to understand how things work.
 
 ## Iteration 2: Login with email and password
 
-Right now, if you go to the signup or login page, you have to enter a "username" and "password". Change "username" by email.
+Right now, if you go to the signup or login page, you have to enter a "email" and "password". Change "email" by email.
 
 Hints:
-- Type `Cmd + Shift + F` and then search for "username" globally in your project. You have to replace the values by "email".
+- Type `Cmd + Shift + F` and then search for "email" globally in your project. You have to replace the values by "email".
 - The files you have to change are:
   - `bin/seeds.js`
   - `models/User.js`
-  - `passport/localStrategy.js` => You have to write `usernameField: 'email'`
+  - `passport/localStrategy.js` => You have to write `emailField: 'email'`
   - `routes/auth.js`
   - `views/login.hbs`
   - `views/signup.hbs`
@@ -41,7 +41,7 @@ In the navbar, add a link to log in with GitHub.
 
 For this iteration, you can check the documentation for the package [`passport-github`](http://www.passportjs.org/packages/passport-github/).
 
-You should also add two fields to your `User` model: `githubUsername` and `profilePicture`. These values should be filled when users log in with GitHub.
+You should also add two fields to your `User` model: `githubemail` and `profilePicture`. These values should be filled when users log in with GitHub.
 
 ```js
 // models/User.js
@@ -52,7 +52,7 @@ const Schema   = mongoose.Schema;
 const userSchema = new Schema({
   email: String,
   password: String,
-  githubUsername: String,
+  githubemail: String,
   profilePicture: String, 
 }, {
   timestamps: {
@@ -67,9 +67,9 @@ module.exports = User;
 
 ## Iteration 5: Update the profile page
 
-Edit the profile page to display the github username and the profile picture from GitHub.
+Edit the profile page to display the github email and the profile picture from GitHub.
 
-**BONUS**: If the user doesn't have any GitHub username, add a button "*Link your account to GitHub*" that would edit the `githubUsername` and the `profilePicture`.
+**BONUS**: If the user doesn't have any GitHub email, add a button "*Link your account to GitHub*" that would edit the `githubemail` and the `profilePicture`.
 
 
 ## Iteration 6: Edit the navbar

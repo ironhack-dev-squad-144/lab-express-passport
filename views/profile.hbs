@@ -1,0 +1,15 @@
+<h1>Profile</h1>
+
+<div class="profile">
+  {{#if user.profilePicture}}
+  <img src="{{user.profilePicture}}" id="image"><br>
+  {{/if}}
+
+  {{#if user.githubUsername}}
+  Username: {{user.githubUsername}} <br>
+  {{/if}}
+
+  {{#if user.profileUrl}}
+  GitHub: {{user.profileUrl}} <br>
+  {{/if}}
+</div>
