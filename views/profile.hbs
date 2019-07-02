@@ -1,0 +1,18 @@
+<h1>Profile!</h1>
+
+{{#if user}}
+Username: {{user.githubUsername}} <br>
+{{/if}}
+
+{{#if user}}
+URL: <a href="{{user.githubUrl}}"></a><br>
+{{/if}}
+
+{{#if user}}
+<img src="{{user.profilePicture}}" alt=""><br>
+{{/if}}
+
+
+created at: {{user.created_at}}<br>
+
+
